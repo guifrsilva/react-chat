@@ -1,23 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/index.css";
+import Sidebar from "./components/Sidebar";
+import Chat from "./components/Chat";
+
+// O projeto está componentizado, conforme expliquei na aula passada,
+// os componentes ficam dentro da pasta components e estão sendo importados
+// aqui como Sidebar e Chat, são os componentes principais que irão
+// renderizar os dois lados do chat, vocês deverão trabalhar no componente
+// Chat para conseguir criar a interface do lado direito do chat.
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <Sidebar />
+      <Chat />
     </div>
   );
 }
