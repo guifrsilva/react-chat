@@ -1,12 +1,10 @@
 import { Avatar } from "@material-ui/core";
 import "./styles.css";
 
-const SidebarChat = ({ name, message }) => {
+const SidebarChat = ({ name, message, onClick }) => {
   return (
-    <div className="sidebarChat">
-      <Avatar
-        src={`https://avatars.dicebear.com/4.5/api/avataaars/${Math.random()}.svg`}
-      />
+    <div className="sidebarChat" onClick={onClick}>
+      <Avatar />
       <div className="sidebarChat__info">
         <h4>{name}</h4>
         <p>{message}</p>

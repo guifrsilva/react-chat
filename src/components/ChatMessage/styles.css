@@ -1,0 +1,23 @@
+.messageContainer {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.messageContainer__message {
+  display: flex;
+  background-color: #FFF;
+  padding: 0 20px;
+  border-radius: 20px;
+}
+
+.messageColor {
+  background-color: #808080;
+}
+
+.right {
+  justify-content: flex-end;
+}
+
+.left {
+  justify-content: flex-start;
+}

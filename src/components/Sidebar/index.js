@@ -6,29 +6,11 @@ import SearchOutlined from "@material-ui/icons/SearchOutlined";
 import SidebarChat from "../SidebarChat";
 import "./styles.css";
 
-const lastMessages = [
-  {
-    id: 1,
-    name: "Julio Augusto",
-    message: "Olá, tudo bem?",
-  },
-  {
-    id: 2,
-    name: "Maria Luiza",
-    message: "Certo, aguardo!",
-  },
-  {
-    id: 3,
-    name: "Pedro Souza",
-    message: "Tudo bem, obrigado!",
-  },
-];
-
-const Sidebar = () => {
+const Sidebar = ({ lastMessages, onSelectedChat }) => {
   return (
     <div className="sidebar">
       <div className="sidebar__header">
-        <Avatar />
+        <Avatar src="https://rollingstone.uol.com.br/media/_versions/legacy/2011/img-1000834-avatar_widelg.jpg" />
         <div className="sidebar__headerRight">
           <IconButton>
             <DonutLargeIcon />
@@ -51,7 +33,12 @@ const Sidebar = () => {
       </div>
       <div className="sidebar__chats">
         {lastMessages.map((chat) => (
-          <SidebarChat key={chat.id} name={chat.name} message={chat.message} />
+          <SidebarChat
+            onClick={() => onSelectedChat(chat)}
+            key={chat.id}
+            name={chat.name}
+            message={chat.message}
+          />
         ))}
       </div>
     </div>
